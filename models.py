@@ -22,14 +22,11 @@ class Net(nn.Module):
         #begin fc layers
         self.fc1 = nn.Linear(256*10*10, 2048) #256 feature maps after final convolution *10*10(height*width of each FM)
         self.fc1bn = nn.BatchNorm1d(2048)
-        self.drop6 = nn.Dropout(p=0.6) 
+        self.drop6 = nn.Dropout(p=0.6)
         self.fc2 = nn.Linear(2048, 1024)
         self.fc2bn = nn.BatchNorm1d(1024)
         self.drop7 = nn.Dropout(p=0.6)
         self.fc3 = nn.Linear(1024, 136)
-
-
-
 
     def forward(self, x):
         x = self.pool(F.leaky_relu(self.conv1(x)))
