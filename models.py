@@ -3,10 +3,8 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 class Net(nn.Module):
-
     def __init__(self):
         super(Net, self).__init__()
-
         ## TODO: Define all the layers of this CNN, the only requirements are:
         ## 1. This network takes in a square (same width and height), grayscale image as input
         ## 2. It ends with a linear layer that represents the keypoints

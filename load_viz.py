@@ -9,12 +9,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
 import cv2
-
 from torch.utils.data import Dataset, DataLoader
 
 class FacialKeypointsDataset(Dataset):
     """Face Landmarks dataset."""
-
     def __init__(self, csv_file, root_dir, transform=None):
         """
         Args:
@@ -33,25 +31,19 @@ class FacialKeypointsDataset(Dataset):
     def __getitem__(self, idx):
         image_name = os.path.join(self.root_dir,
                                 self.key_pts_frame.iloc[idx, 0])
-
         image = mpimg.imread(image_name)
-
         # if image has an alpha color channel, get rid of it
         if(image.shape[2] == 4):
             image = image[:,:,0:3]
-
         key_pts = self.key_pts_frame.iloc[idx, 1:].as_matrix()
         key_pts = key_pts.astype('float').reshape(-1, 2)
         sample = {'image': image, 'keypoints': key_pts}
-
         if self.transform:
             sample = self.transform(sample)
-
         return sample
 
 import torch
 from torchvision import transforms, utils
-# tranforms
 
 class Normalize(object):
     """Convert a color image to grayscale and normalize the color range to [0,1]."""
@@ -162,7 +154,7 @@ class ToTensor(object):
 
         return {'image': torch.from_numpy(image),
                 'keypoints': torch.from_numpy(key_pts)}
-#--------------------------------------------
+#----------------------------------------------------------------------
 def show_keypoints(image, key_pts):
     """Show image with keypoints"""
     plt.imshow(image)
@@ -207,7 +199,6 @@ for i in range(5, num_to_display):
     ax.set_title('Sample #{}'.format(i))
     # Using the same display function, defined earlier
     show_keypoints(sample['image'], sample['keypoints'])
-
 # test out some of these transforms
 rescale = Rescale(100)
 crop = RandomCrop(50)
