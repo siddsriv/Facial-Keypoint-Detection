@@ -6,5 +6,5 @@ Facial Keypoint detection or Landmark detection implies identifying the various 
 <img src='images/landmarks_numbered.jpg' width=50% height=50%/>
 
 ### Example
-<img src='images/index.jpg' width=50% height=50%/>
+<img src='images/index.png' width=50% height=50%/>
 
