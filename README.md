@@ -31,7 +31,7 @@ This particular kernel learned to detect edges (high frequency areas) in the inp
 
 ## Predicting keypoints
 
-I use a haar cascade to detect faces and consequently use the trained model to detect the facial keypoints (x, y) coordinate pairs. The detected faces (region of interest) are preprocessed: converted to grayscale, normalized, resized. (Refer predict_keypoints.py for the code and complete documented walkthrough)
+I use a haar cascade to detect faces and consequently use the trained model to detect the facial keypoints (x, y) coordinate pairs. The detected faces (region of interest) are preprocessed: converted to grayscale, normalized, resized (refer predict_keypoints.py for the code and complete documented walkthrough) before actually predicting the keypoints.
 
 ### Results
 <img src='images/obamaface.png' width=50% height=50%/>
