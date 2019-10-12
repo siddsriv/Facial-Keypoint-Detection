@@ -8,3 +8,22 @@ Facial Keypoint detection or Landmark detection implies identifying the various 
 ### Example
 <img src='images/index.png' width=50% height=50%/>
 
+## Training and Feature Visualization
+Training of the network and feature vizualization is done in the train_feautureviz.py file. The training went on for just 20 epochs with a batch size of 16. Adam optimizer and SmoothL1 loss were used. 
+
+### Before training
+<img src='images/index3.png' width=50% height=50%/>
+<img src='images/index2.png' width=50% height=50%/>
+
+### After training 
+<img src='images/aftertrain1.png' width=50% height=50%/>
+<img src='images/aftertrain2.png' width=50% height=50%/>
+
+### Feature vizualization
+Here are some examples of the <b>learned<\b> weights:
+<img src='images/fv2.png' width=50% height=50%/>
+<img src='images/weight.png' width=50% height=50%/>
+  
+Learning in action (example with a single learned kernel on an input image):
+It seems to be an edge detector!
+<img src='images/fv1.png' width=20% height=30%/> <img src='images/fv2.png' width=20% height=30%/> <img src='images/fv3.png' width=20% height=30%/>
