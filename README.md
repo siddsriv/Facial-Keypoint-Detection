@@ -28,3 +28,11 @@ Examples of **learned** weights in kernels/filters:
 ### Learning in action (example with a single kernel on an input image):
 <img src='images/fv1.png' width=20% height=30%/> <img src='images/fv2.png' width=20% height=30%/> <img src='images/fv3.png' width=20% height=30%/><br/>
 This particular kernel learned to detect edges (high frequency areas) in the input image.
+
+## Predicting keypoints
+
+I use a haar cascade to detect faces and consequently use the trained model to detect the facial keypoints (x, y) coordinate pairs. The detected faces (region of interest) are preprocessed: converted to grayscale, normalized, resized. (Refer predict_keypoints.py for the code and complete documented walkthrough)
+
+### Results
+<img src='images/obamaface.png' width=50% height=50%/>
+<img src='images/michelle_detected.png' width=50% height=50%/>
