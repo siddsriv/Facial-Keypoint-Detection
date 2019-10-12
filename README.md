@@ -26,5 +26,5 @@ Examples of **learned** weights in kernels/filters:
 <img src='images/weight.png' width=30% height=40%/>
    
 ### Learning in action (example with a single kernel on an input image):
-<img src='images/fv1.png' width=20% height=30%/> * <img src='images/fv2.png' width=20% height=30%/> = <img src='images/fv3.png' width=20% height=30%/><br/>
+<img src='images/fv1.png' width=20% height=30%/> <img src='images/fv2.png' width=20% height=30%/> <img src='images/fv3.png' width=20% height=30%/><br/>
 This particular kernel learned to detect edges (high frequency areas) in the input image.
